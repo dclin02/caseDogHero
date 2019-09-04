@@ -41,3 +41,5 @@ Após uma pesquisa rapida, descobre-se que o Rails vem com suporte nativo e pré
 Por ter menos familiaridade com o front-end, deixarei esta decisão mais para frente, dependendo do caminhamento do restante do projeto.
 
 Assim, inicio o primeiro passo pratico: aprender a utilizar Ruby on Rails e criar o projeto.
+
+#ssh test
