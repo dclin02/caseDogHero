@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :dogs
   root 'application#hello'
   resources :passeadores
   resources :clientes
