@@ -52,3 +52,8 @@ Seguindo tutorial do railstutorial.org, descobrimos que o Heroku näo tem suport
 -> Como queremos interagir de modo RESTful com os clientes, dogs e passeadores podemos facilitar e acelerar a criação de todos os componentes (controller model e view) pela geração automatica com scaffold
 
 1a tentativa rails generate scaffold Clientes email:distinct:index nome sobrenome tel endereco
+:distinct não produziu o efeito desejado
+mudando para
+:uniq
+rails destroy scaffold Clientes
+rails generate scaffold Clientes email:uniq:index nome sobrenome tel endereco  (:uniq:index é redundante?)

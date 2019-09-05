@@ -10,6 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_09_05_203739) do
+
+  create_table "clientes", force: :cascade do |t|
+    t.string "email"
+    t.string "nome"
+    t.string "sobrenome"
+    t.string "tel"
+    t.string "endereco"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_clientes_on_email", unique: true
+  end
+
+  create_table "passeadores", force: :cascade do |t|
+    t.string "email"
+    t.string "nome"
+    t.string "sobrenome"
+    t.string "tel"
+    t.string "bairro"
+    t.integer "preco"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_passeadores_on_email", unique: true
+  end
 
 end
