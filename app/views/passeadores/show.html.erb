@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @passeadore.email %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @passeadore.nome %>
+</p>
+
+<p>
+  <strong>Sobrenome:</strong>
+  <%= @passeadore.sobrenome %>
+</p>
+
+<p>
+  <strong>Tel:</strong>
+  <%= @passeadore.tel %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @passeadore.bairro %>
+</p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @passeadore.preco %>
+</p>
+
+<%= link_to 'Edit', edit_passeadore_path(@passeadore) %> |
+<%= link_to 'Back', passeadores_path %>

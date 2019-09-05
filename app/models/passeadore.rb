@@ -1,0 +1,2 @@
+class Passeadore < ApplicationRecord
+end
