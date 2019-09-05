@@ -57,5 +57,3 @@ mudando para
 :uniq
 rails destroy scaffold Clientes
 rails generate scaffold Clientes email:uniq:index nome sobrenome tel endereco  (:uniq:index é redundante?)
-
-deployed successfuly at https://murmuring-shore-33383.herokuapp.com/
