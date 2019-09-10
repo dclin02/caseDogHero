@@ -1,10 +1,11 @@
 class DogsController < ApplicationController
+  before_action :get_cliente
   before_action :set_dog, only: [:show, :edit, :update, :destroy]
 
   # GET /dogs
   # GET /dogs.json
   def index
-    @dogs = Dog.all
+    @dogs = @cliente.dogs
   end
 
   # GET /dogs/1
@@ -14,7 +15,7 @@ class DogsController < ApplicationController
 
   # GET /dogs/new
   def new
-    @dog = Dog.new
+    @dog = @cliente.dogs.build
   end
 
   # GET /dogs/1/edit
@@ -24,11 +25,11 @@ class DogsController < ApplicationController
   # POST /dogs
   # POST /dogs.json
   def create
-    @dog = Dog.new(dog_params)
+    @dog = @cliente.dogs.build(dog_params)
 
     respond_to do |format|
       if @dog.save
-        format.html { redirect_to @dog, notice: 'Dog was successfully created.' }
+        format.html { redirect_to cliente_dogs_path(@cliente), notice: 'Dog was successfully created.' }
         format.json { render :show, status: :created, location: @dog }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class DogsController < ApplicationController
   def update
     respond_to do |format|
       if @dog.update(dog_params)
-        format.html { redirect_to @dog, notice: 'Dog was successfully updated.' }
+        format.html { redirect_to cliente_dogs_path(@cliente), notice: 'Dog was successfully updated.' }
         format.json { render :show, status: :ok, location: @dog }
       else
         format.html { render :edit }
@@ -56,15 +57,20 @@ class DogsController < ApplicationController
   def destroy
     @dog.destroy
     respond_to do |format|
-      format.html { redirect_to dogs_url, notice: 'Dog was successfully destroyed.' }
+      format.html { redirect_to cliente_dogs_path(@cliente), notice: 'Dog was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
+    #Gets current client to share between actions.
+    def get_cliente
+      @cliente = Cliente.find(params[:cliente_id])
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_dog
-      @dog = Dog.find(params[:id])
+      @dog = @cliente.dogs.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
