@@ -1,4 +1,4 @@
 class Dog < ApplicationRecord
   belongs_to :cliente
-  validates :name, :raca, presence: true
+  validates :nome, :raca, presence: true
 end

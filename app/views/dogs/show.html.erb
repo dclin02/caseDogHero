@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @dog.name %>
+  <strong>Cliente:</strong>
+  <%= @dog.cliente.nome %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @dog.nome %>
 </p>
 
 <p>
@@ -11,8 +16,33 @@
 </p>
 
 <p>
-  <strong>Cliente:</strong>
-  <%= @dog.cliente_id %>
+  <strong>Genero:</strong>
+  <%= @dog.genero %>
+</p>
+
+<p>
+  <strong>Idade:</strong>
+  <%= @dog.idade %>
+</p>
+
+<p>
+  <strong>Porte:</strong>
+  <%= @dog.porte %>
+</p>
+
+<p>
+  <strong>Castrado:</strong>
+  <%= @dog.castrado %>
+</p>
+
+<p>
+  <strong>Raiva:</strong>
+  <%= @dog.raiva %>
+</p>
+
+<p>
+  <strong>Vacinas:</strong>
+  <%= @dog.vacinas %>
 </p>
 
 <%= link_to 'Edit', edit_cliente_dog_path(@cliente, @dog) %> |

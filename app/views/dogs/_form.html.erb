@@ -11,24 +11,54 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :raca %>
-    <%= form.text_field :raca %>
-  </div>
-  
 <%
 =begin %> 
   <div class="field">
     <%= form.label :cliente_id %>
     <%= form.text_field :cliente_id %>
   </div>
-<% 
+  <% 
 =end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :raca %>
+    <%= form.text_field :raca %>
+  </div>
+
+  <div class="field">
+    <%= form.label :genero %>
+    <%= form.text_field :genero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idade %>
+    <%= form.number_field :idade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :porte %>
+    <%= form.text_field :porte %>
+  </div>
+
+  <div class="field">
+    <%= form.label :castrado %>
+    <%= form.check_box :castrado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :raiva %>
+    <%= form.check_box :raiva %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vacinas %>
+    <%= form.check_box :vacinas %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

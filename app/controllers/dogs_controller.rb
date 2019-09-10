@@ -63,18 +63,18 @@ class DogsController < ApplicationController
   end
 
   private
-    #Gets current client to share between actions.
-    def get_cliente
-      @cliente = Cliente.find(params[:cliente_id])
-    end
+  #Gets current client to share between actions.
+  def get_cliente
+    @cliente = Cliente.find(params[:cliente_id])
+  end
 
     # Use callbacks to share common setup or constraints between actions.
     def set_dog
-      @dog = @cliente.dogs.find(params[:id])
+      @dog = Dog.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dog_params
-      params.require(:dog).permit(:name, :raca, :cliente_id)
+      params.require(:dog).permit(:cliente_id, :nome, :raca, :genero, :idade, :porte, :castrado, :raiva, :vacinas)
     end
 end

@@ -14,9 +14,15 @@ class DogsTest < ApplicationSystemTestCase
     visit dogs_url
     click_on "New Dog"
 
+    check "Castrado" if @dog.castrado
     fill_in "Cliente", with: @dog.cliente_id
-    fill_in "Name", with: @dog.name
+    fill_in "Genero", with: @dog.genero
+    fill_in "Idade", with: @dog.idade
+    fill_in "Nome", with: @dog.nome
+    fill_in "Porte", with: @dog.porte
     fill_in "Raca", with: @dog.raca
+    check "Raiva" if @dog.raiva
+    check "Vacinas" if @dog.vacinas
     click_on "Create Dog"
 
     assert_text "Dog was successfully created"
@@ -27,9 +33,15 @@ class DogsTest < ApplicationSystemTestCase
     visit dogs_url
     click_on "Edit", match: :first
 
+    check "Castrado" if @dog.castrado
     fill_in "Cliente", with: @dog.cliente_id
-    fill_in "Name", with: @dog.name
+    fill_in "Genero", with: @dog.genero
+    fill_in "Idade", with: @dog.idade
+    fill_in "Nome", with: @dog.nome
+    fill_in "Porte", with: @dog.porte
     fill_in "Raca", with: @dog.raca
+    check "Raiva" if @dog.raiva
+    check "Vacinas" if @dog.vacinas
     click_on "Update Dog"
 
     assert_text "Dog was successfully updated"

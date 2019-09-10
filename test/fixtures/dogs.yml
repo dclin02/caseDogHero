@@ -1,11 +1,23 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  raca: MyString
   cliente: one
+  nome: MyString
+  raca: MyString
+  genero: MyString
+  idade: 1
+  porte: MyString
+  castrado: false
+  raiva: false
+  vacinas: false
 
 two:
-  name: MyString
-  raca: MyString
   cliente: two
+  nome: MyString
+  raca: MyString
+  genero: MyString
+  idade: 1
+  porte: MyString
+  castrado: false
+  raiva: false
+  vacinas: false
