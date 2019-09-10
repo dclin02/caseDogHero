@@ -18,7 +18,6 @@
         <td><%= dog.name %></td>
         <td><%= dog.raca %></td>
         <td><%= dog.cliente.nome %></td>
-        <td><%= link_to 'Show Client', [@cliente] %></td>
         <td><%= link_to 'Edit Dog', edit_cliente_dog_path(@cliente, dog) %></td>
         <td><%= link_to 'Destroy Dog', [@cliente, dog], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -29,3 +28,6 @@
 <br>
 
 <%= link_to 'New Dog', new_cliente_dog_path(@cliente) %>
+<br>
+<br>
+<td><%= link_to 'Show Client', [@cliente] %></td>
