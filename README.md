@@ -61,3 +61,5 @@ rails generate scaffold Clientes email:uniq:index nome sobrenome tel endereco  (
 deployed successfuly at https://murmuring-shore-33383.herokuapp.com/
 
 Aparentemten o rails inlcui um parametro id automaticamente, assim o index do email não era necessario (o objetivo era ter uma referencia ao cliente para ligar seus dogs)
+
+Tutorial utilizado para deixar Dogs nested com Clientes https://www.digitalocean.com/community/tutorials/how-to-create-nested-resources-for-a-ruby-on-rails-application 
