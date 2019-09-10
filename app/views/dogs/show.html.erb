@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Nome:</strong>
-  <%= @dog.nome %>
+  <strong>Name:</strong>
+  <%= @dog.name %>
 </p>
 
 <p>
   <strong>Raca:</strong>
   <%= @dog.raca %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @dog.cliente_id %>
 </p>
 
 <%= link_to 'Edit', edit_dog_path(@dog) %> |

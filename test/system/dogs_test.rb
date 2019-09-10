@@ -14,7 +14,8 @@ class DogsTest < ApplicationSystemTestCase
     visit dogs_url
     click_on "New Dog"
 
-    fill_in "Nome", with: @dog.nome
+    fill_in "Cliente", with: @dog.cliente_id
+    fill_in "Name", with: @dog.name
     fill_in "Raca", with: @dog.raca
     click_on "Create Dog"
 
@@ -26,7 +27,8 @@ class DogsTest < ApplicationSystemTestCase
     visit dogs_url
     click_on "Edit", match: :first
 
-    fill_in "Nome", with: @dog.nome
+    fill_in "Cliente", with: @dog.cliente_id
+    fill_in "Name", with: @dog.name
     fill_in "Raca", with: @dog.raca
     click_on "Update Dog"
 
