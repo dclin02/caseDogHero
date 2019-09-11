@@ -3,6 +3,7 @@ require "application_system_test_case"
 class ClientesTest < ApplicationSystemTestCase
   setup do
     @cliente = clientes(:one)
+    @anotherCliente = clientes(:three)
   end
 
   test "visiting the index" do
@@ -14,11 +15,11 @@ class ClientesTest < ApplicationSystemTestCase
     visit clientes_url
     click_on "New Cliente"
 
-    fill_in "Email", with: @cliente.email
-    fill_in "Endereco", with: @cliente.endereco
-    fill_in "Nome", with: @cliente.nome
-    fill_in "Sobrenome", with: @cliente.sobrenome
-    fill_in "Tel", with: @cliente.tel
+    fill_in "Email", with: 'testmail@testmail.com'
+    fill_in "Endereco", with: @anotherCliente.endereco
+    fill_in "Nome", with: @anotherCliente.nome
+    fill_in "Sobrenome", with: @anotherCliente.sobrenome
+    fill_in "Tel", with: @anotherCliente.tel
     click_on "Create Cliente"
 
     assert_text "Cliente was successfully created"

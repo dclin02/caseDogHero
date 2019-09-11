@@ -17,7 +17,7 @@ class PasseadoresControllerTest < ActionDispatch::IntegrationTest
 
   test "should create passeadore" do
     assert_difference('Passeadore.count') do
-      post passeadores_url, params: { passeadore: { bairro: @passeadore.bairro, email: @passeadore.email, nome: @passeadore.nome, preco: @passeadore.preco, sobrenome: @passeadore.sobrenome, tel: @passeadore.tel } }
+      post passeadores_url, params: { passeadore: { bairro: @passeadore.bairro, email: '@passeadore.email', nome: @passeadore.nome, preco: @passeadore.preco, sobrenome: @passeadore.sobrenome, tel: @passeadore.tel } }
     end
 
     assert_redirected_to passeadore_url(Passeadore.last)

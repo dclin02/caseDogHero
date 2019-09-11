@@ -1,7 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  email: MyString
+  email: MyString10
   nome: MyString
   sobrenome: MyString
   tel: MyString
@@ -9,7 +9,7 @@ one:
   preco: 1
 
 two:
-  email: MyString
+  email: MyString20
   nome: MyString
   sobrenome: MyString
   tel: MyString
