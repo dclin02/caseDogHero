@@ -79,5 +79,6 @@ Com os toda arquitetura MVC implementada, com algumas validações basicas imple
 Ao se rodar rails test, todos os testes apresetam erros. Iniciaremos concertando os testes gerados pelo scaffold antes de passar para outras etapas. Temos inicialmente erros relacionados a routing pelos testes não levarem em conta que Dogs esta nested em Clientes, e erros relacionados a validação de uniqueness do email dos clientes e passeadores.
 
 Agora com todos os testes passando, chega-se a hora de criar nossos proprios testes unitarios.
+Pesquisando sobre testes em Rails, percebe-se que provavelmente a ferramenta mais utilizada eh o RSpec, no entanto, como o Rails por padrão utiliza o Minitest, e como muitos testes ja foram criados automaticamente pelo Rails, decidi me ater a ferramente que ja esta sendo utilizada ao inves de ter que recomeçar o aprendizado do zero.
 
 Bibliografia
