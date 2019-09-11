@@ -5,7 +5,7 @@ class Cliente < ApplicationRecord
   end
   # validates_each acima copiado da internet para verficação de uppercase na primeira letra dos nomes
   validates :nome, :sobrenome, presence: true
-  validates :nome, :sobrenome, :endereco, length: { maximum: 50}
-  #validates :email, uniqueness: { case_sensitive: false }
+  validates :nome, :sobrenome, :endereco, length: { maximum: 50 }
+  validates :email, uniqueness: { case_sensitive: false }
   validates_associated :dogs
 end
