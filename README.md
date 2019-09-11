@@ -47,6 +47,16 @@ Assim, inicio o primeiro passo pratico: aprender a utilizar Ruby on Rails e cria
 
 Seguindo tutorial dos capitulos gratuitos de railstutorial.org, descobrimos que o Heroku näo tem suporte ao Sqlite3 e tem suporte nativo ao Postegresql, descobrimos tambem que eh possivel utilizar o Sqlite3 apenas para develepment e o Postegresql apenas para deployment editando o Gemfile. Assim, eh exatamente isto que pretende-se fazer.
 
+Modelo do banco de dados:
+Clientes
+cliente_id email nome sobrenome tel endereco
+         ^
+Dogs     |
+id cliente_id nome raca genero idade porte castrado raiva v8_v10
+
+Passeadores
+id email nome sobrenome tel bairro preco
+
 -> criação do modelo cliente
 
 -> Como queremos interagir de modo RESTful com os clientes, dogs e passeadores podemos facilitar e acelerar a criação de todos os componentes (controller model e view) pela geração automatica com scaffold
@@ -63,3 +73,7 @@ deployed successfuly at https://murmuring-shore-33383.herokuapp.com/
 Aparentemten o rails inlcui um parametro id automaticamente, assim o index do email não era necessario (o objetivo era ter uma referencia ao cliente para ligar seus dogs)
 
 Tutorial utilizado para deixar Dogs nested com Clientes https://www.digitalocean.com/community/tutorials/how-to-create-nested-resources-for-a-ruby-on-rails-application 
+
+
+
+Bibliografia
