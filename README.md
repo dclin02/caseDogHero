@@ -78,5 +78,6 @@ Tutorial utilizado para deixar Dogs nested com Clientes https://www.digitalocean
 Com os toda arquitetura MVC implementada, com algumas validações basicas implementadas, chegou-se a hora de iniciar as tentativas de testes:
 Ao se rodar rails test, todos os testes apresetam erros. Iniciaremos concertando os testes gerados pelo scaffold antes de passar para outras etapas. Temos inicialmente erros relacionados a routing pelos testes não levarem em conta que Dogs esta nested em Clientes, e erros relacionados a validação de uniqueness do email dos clientes e passeadores.
 
+Agora com todos os testes passando, chega-se a hora de criar nossos proprios testes unitarios.
 
 Bibliografia
