@@ -5,5 +5,6 @@ class Passeadore < ApplicationRecord
   # validates_each acima copiado da internet para verficação de uppercase na primeira letra dos nomes
   validates :nome, :sobrenome, presence: true
   validates :email, uniqueness: { case_sensitive: false }
-  #validate preco
+  validates :nome, :sobrenome, :bairro, length: { maximum: 50 }
+  # implementar validacao de preco
 end
