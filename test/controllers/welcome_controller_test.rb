@@ -19,13 +19,14 @@ class WelcomeControllerTest < ActionDispatch::IntegrationTest
   test "should not find cliente and redirect to home" do
     get welcome_searchCliente_url, params: {email: 'esseemailnaodeveriaexistiroqfacosealguemcriarexatamenteele'}
     assert_redirected_to welcome_index_path
-    assert flash[:clienteNotice].present?
+    #assert flash[:clienteNotice].present?
+    assert_equal 'Cliente não encontrado.', flash[:clienteNotice]
   end
 
   test "should not find passeador and redirect to home" do
     get welcome_searchPasseadore_url, params: {pEmail: 'esseemailnaodeveriaexistiroqfacosealguemcriarexatamenteele'}
     assert_redirected_to welcome_index_path
-    assert flash[:passeadoreNotice].present?
+    assert_equal 'Passeador não encontrado.', flash[:passeadoreNotice]
   end
 
   test "should find cliente and redirect to its page" do
@@ -38,4 +39,7 @@ class WelcomeControllerTest < ActionDispatch::IntegrationTest
     get welcome_searchPasseadore_url, params: {pEmail: passeadores(:one).email}
     assert_redirected_to passeadore_url(passeadores(:one))
   end
+
+  #test "should return to index with search error flash notice"
+    #get welcome_searchCliente_url
 end

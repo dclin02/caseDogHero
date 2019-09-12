@@ -20,7 +20,9 @@ class WelcomeController < ApplicationController
     @passeadore = Passeadore.find_by(email: params[:pEmail])
   end
 
-  def getNextPage(oqProcuro)
+  private
+  
+def getNextPage(oqProcuro)
     if oqProcuro == "clienteSearch"
       if @cliente.present?
         return @cliente
