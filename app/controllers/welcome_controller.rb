@@ -2,32 +2,45 @@ class WelcomeController < ApplicationController
   def index
   end
 
-    
   def searchCliente
-    if params[:email]
-      @cliente = Cliente.find_by(email: params[:email])
-      if @cliente.present?
-        redirect_to @cliente
-      else
-        flash[:clienteNotice] = "Cliente não encontrado."
-        redirect_to welcome_index_path
-      end
-    else
-      redirect_to welcome_index_path
-    end
+    getCliente
+    redirect_to getNextPage("clienteSearch")
   end
 
   def searchPasseadore
-    if params[:pEmail]
-      @passeadore = Passeadore.find_by(email: params[:pEmail])
+    getPasseadore
+    redirect_to getNextPage("passeadoreSearch")
+  end
+
+  def getCliente
+    @cliente = Cliente.find_by(email: params[:email])
+  end
+
+  def getPasseadore
+    @passeadore = Passeadore.find_by(email: params[:pEmail])
+  end
+
+  private
+  
+def getNextPage(oqProcuro)
+    if oqProcuro == "clienteSearch"
+      if @cliente.present?
+        return @cliente
+      else
+        flash[:clienteNotice] = "Cliente não encontrado."
+        return welcome_index_path
+      end
+
+    elsif oqProcuro == "passeadoreSearch"
       if @passeadore.present?
-        redirect_to @passeadore
+        return @passeadore
       else
         flash[:passeadoreNotice] = "Passeador não encontrado."
-        redirect_to welcome_index_path
+        return welcome_index_path
       end
     else
-      redirect_to welcome_index_path
+      flash[:nextPageNotice] = "Parametro de Pesquisa Desconhecido."
+      return welcome_index_path
     end
   end
 end
