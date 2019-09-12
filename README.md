@@ -81,10 +81,6 @@ Ao se rodar rails test, todos os testes apresetam erros. Iniciaremos concertando
 Agora com todos os testes passando, chega-se a hora de criar nossos proprios testes unitarios.
 Pesquisando sobre testes em Rails, percebe-se que provavelmente a ferramenta mais utilizada eh o RSpec, no entanto, como o Rails por padrão utiliza o Minitest, e como muitos testes ja foram criados automaticamente pelo Rails, decidi me ater a ferramente que ja esta sendo utilizada ao inves de ter que recomeçar o aprendizado do zero.
 
-<<<<<<< HEAD
-
-Bibliografia
-=======
 Até agora aprendeu-se muito sobre o Rails mas programou-se quase nada em Ruby e quase tudo do Rails foi feito automaticamente. Para exercitar melhor tudo o que foi aprendido, decidiu-se implementar algumas novas funcionalidades:
 Adicinou-se o Controlador Admins, cujo intuito é dar opções acessiveis somente após realizar uma autenticação. Estas ações são a de listar todos os clientes, listar todos os passeadores, e listar todos os cachorros (que por sua vez estão agrupados por seus clientes).
 Adicionou-se uma Pagina Inicial que contem as opções: Login Admin, Cadastrar Cliente, Cadastrar Passeador, Entrar como Cliente (formulario de email), Entrar como Passeador (formulario de email)
@@ -93,9 +89,8 @@ Assim, um usuario sem autenticação não consegue listar todo conteudo das tabe
 Temos agora que criar testes para estas novas funcionalidades.
 
 Pretende-se ainda implementar, caso tenhamos tempo:
-todo: pesquisa de passeadores por bairro na pagina do cliente
+todo: pesquisa de passeadores por bairro na pagina do cliente, e talvez filtro por preço
 pesquisar como transformar porte em faixas selecionaveis
 tentar centralizar conteudo na pagina
 
 Bibliografia
->>>>>>> development
