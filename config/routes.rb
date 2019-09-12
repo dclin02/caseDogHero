@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get '/welcome', to: 'welcome#index'
   get 'welcome/index'
   get 'welcome/searchCliente'
+  get 'welcome/searchPasseadore'
   get '/admin', to: 'admins#dash'
   get '/admin/showClientes', to: 'admins#showClientes'
   get '/admin/showDogs', to: 'admins#showDogs'

@@ -1,16 +1,23 @@
 <h1>Hello, DogHero!</h1>
+<br>
 <td><%= link_to 'Login Administrador', admins_path %></td>
-<br>
+<br><br>
 <td><%= link_to 'Cadastrar novo Cliente', new_cliente_path %></td>
-<br>
+<br><br>
 <td><%= link_to 'Cadastrar novo Passeador', new_passeadore_path %></td>
-
+<br><br>
+Entrar como Cliente:
 <%= form_tag(welcome_searchCliente_path, method: 'get') do %>
       <%= text_field_tag(:email, params[:email]) %>
       <%= submit_tag("Email", name: nil) %>
 <% end %>
+<br>
 <% flash.each do |message_type, message| %>
 <div class="alert alert-<%= message_type %>"><%= message %></div>
 <% end %>
-
-<p>Find me in app/views/welcome/index.html.erb</p>
+<br>
+Entrar como Passeador:
+<%= form_tag(welcome_searchPasseadore_path, method: 'get') do %>
+      <%= text_field_tag(:pEmail, params[:pEmail]) %>
+      <%= submit_tag("Email", name: nil) %>
+<% end %>
