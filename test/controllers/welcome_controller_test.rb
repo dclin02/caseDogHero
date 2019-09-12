@@ -39,7 +39,4 @@ class WelcomeControllerTest < ActionDispatch::IntegrationTest
     get welcome_searchPasseadore_url, params: {pEmail: passeadores(:one).email}
     assert_redirected_to passeadore_url(passeadores(:one))
   end
-
-  #test "should return to index with search error flash notice"
-    #get welcome_searchCliente_url
 end

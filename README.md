@@ -20,9 +20,9 @@
 
 * Deployment instructions
 Has been deployed on Heroku (https://daniellincasedh.herokuapp.com/) through the following method:
-    - heroku login
-    - heroku create
-    - git push heroku master
+        - heroku login
+        - heroku create
+        - git push heroku master
 
 * Observations
 
@@ -39,13 +39,13 @@ Update: O rails ja produz automaticamente Views em HTML que fornecem um frontend
 
 Assim, inicio o primeiro passo pratico: aprender a utilizar Ruby on Rails e criar o projeto.
 
-Seguindo tutorial dos capitulos gratuitos de [[1]](https://github.com/dclin02/caseDogHero/tree/development/bibliografia.md "railstutorial.org/book/beginning"), descobrimos que o Heroku näo tem suporte ao Sqlite3 e tem suporte nativo ao Postegresql, descobrimos tambem que eh possivel utilizar o Sqlite3 apenas para development e o Postegresql apenas para production editando o Gemfile. Assim, eh exatamente isto que pretende-se fazer.
+Seguindo tutorial dos capitulos gratuitos de [[1]](https://github.com/dclin02/caseDogHero/tree/development/bibliografia.md "railstutorial.org/book/beginning") e [[2]](https://github.com/dclin02/caseDogHero/tree/development/bibliografia.md "https://guides.rubyonrails.org/getting_started.html"), descobrimos que o Heroku näo tem suporte ao Sqlite3 e tem suporte nativo ao Postegresql, descobrimos tambem que eh possivel utilizar o Sqlite3 apenas para development e o Postegresql apenas para production editando o Gemfile. Assim, eh exatamente isto que pretende-se fazer.
 
 -> Idealização do [Modelo do banco de dados](https://github.com/dclin02/caseDogHero/tree/development/documentation/database.md):
 
 -> criação do modelo cliente
 
--> Como queremos interagir de modo RESTful com os clientes, dogs e passeadores podemos facilitar e acelerar a criação de todos os componentes (controller model e view) pela geração automatica com scaffold.
+-> Como queremos interagir de modo RESTful com os clientes, dogs e passeadores podemos facilitar e acelerar a criação de todos os componentes (controller model e view) pela geração automatica com scaffold. [[4]](https://github.com/dclin02/caseDogHero/tree/development/bibliografia.md "https://kolosek.com/rails-scaffold/")
 
 1a tentativa rails generate scaffold Clientes email:distinct:index nome sobrenome tel endereco
 :distinct não produziu o efeito desejado
@@ -58,10 +58,10 @@ Deployed successfuly at https://daniellincasedh.herokuapp.com/
 
 Aparentemente o rails inclui um parametro id automaticamente, assim o index do email não era necessario (o objetivo era ter uma referencia ao cliente para ligar seus dogs). Mas acredito que apesar disso o index do email substitui o padrão, pelo menos não sendo redundante.
 
-Seguiu-se tutorial [[2]](https://github.com/dclin02/caseDogHero/tree/development/bibliografia.md "https://www.digitalocean.com/community/tutorials/how-to-create-nested-resources-for-a-ruby-on-rails-application") para deixar Dogs nested com Clientes.
+Seguiu-se tutorial [[3]](https://github.com/dclin02/caseDogHero/tree/development/bibliografia.md "https://www.digitalocean.com/community/tutorials/how-to-create-nested-resources-for-a-ruby-on-rails-application") para deixar Dogs nested com Clientes.
 
 
-Com toda arquitetura MVC implementada, com algumas validações basicas implementadas, chegou-se a hora de iniciar as tentativas de testes:
+Com toda arquitetura MVC implementada, com algumas validações basicas implementadas, chegou-se a hora de iniciar as tentativas de testes [[7]](https://github.com/dclin02/caseDogHero/tree/development/bibliografia.md "https://guides.rubyonrails.org/testing.html"):
 Ao se rodar rails test, todos os testes apresentam erros. Iniciaremos consertando os testes gerados pelo scaffold antes de passar para outras etapas. Temos inicialmente erros relacionados a routing pelos testes não levarem em conta que Dogs estar nested em Clientes, e erros relacionados a validação de uniqueness do email dos clientes e passeadores.
 
 Agora com todos os testes passando, chega-se a hora de criar nossos proprios testes unitarios.
