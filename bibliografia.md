@@ -1,6 +1,6 @@
 # Bibliografia
 
-[1] railstutorial.org/book/beginning
+[1] http://railstutorial.org/book/beginning
 
 [2] https://guides.rubyonrails.org/getting_started.html
 
