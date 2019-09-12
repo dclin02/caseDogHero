@@ -7,7 +7,7 @@
     <tr>
       <th>Cliente</th>
       <th>Nome</th>
-      <th>Raca</th>
+      <th>Raça</th>
       <th>Genero</th>
       <th>Idade</th>
       <th>Porte</th>
@@ -30,9 +30,9 @@
         <td><%= dog.castrado ? "Sim" : "Não" %></td>
         <td><%= dog.raiva ? "Sim" : "Não" %></td>
         <td><%= dog.vacinas ? "Sim" : "Não" %></td>
-        <td><%= link_to 'Show', [@cliente, dog] %></td>
-        <td><%= link_to 'Edit', edit_cliente_dog_path(@cliente, dog) %></td>
-        <td><%= link_to 'Destroy', [@cliente, dog], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', [@cliente, dog] %></td>
+        <td><%= link_to 'Editar', edit_cliente_dog_path(@cliente, dog) %></td>
+        <td><%= link_to 'Destruir', [@cliente, dog], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,6 +40,6 @@
 
 <br>
 
-<%= link_to 'New Dog', new_cliente_dog_path(@cliente) %>
+<%= link_to 'Adicionar novo Dog', new_cliente_dog_path(@cliente) %>
 <br><br>
-<td><%= link_to 'Show Client', [@cliente] %></td>
+<td><%= link_to 'Mostrar Cliente', [@cliente] %></td>

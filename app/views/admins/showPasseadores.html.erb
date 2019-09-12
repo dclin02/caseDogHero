@@ -12,7 +12,7 @@
       <th>Sobrenome</th>
       <th>Tel</th>
       <th>Bairro</th>
-      <th>Preco</th>
+      <th>Preço</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,12 +26,12 @@
         <td><%= passeadore.tel %></td>
         <td><%= passeadore.bairro %></td>
         <td><%= passeadore.preco %></td>
-        <td><%= link_to 'Show', passeadore %></td>
-        <td><%= link_to 'Edit', edit_passeadore_path(passeadore) %></td>
-        <td><%= link_to 'Destroy', passeadore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', passeadore %></td>
+        <td><%= link_to 'Editar', edit_passeadore_path(passeadore) %></td>
+        <td><%= link_to 'Destruir', passeadore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to 'Back', admins_path %>
+<%= link_to 'Voltar', admins_path %>

@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <strong>Raca:</strong>
+  <strong>Raça:</strong>
   <%= @dog.raca %>
 </p>
 
@@ -32,18 +32,18 @@
 
 <p>
   <strong>Castrado:</strong>
-  <%= @dog.castrado %>
+  <%= @dog.castrado ? "Sim" : "Não" %>
 </p>
 
 <p>
-  <strong>Raiva:</strong>
-  <%= @dog.raiva %>
+  <strong>Vacinado contra Raiva?:</strong>
+  <%= @dog.raiva ? "Sim" : "Não" %>
 </p>
 
 <p>
-  <strong>Vacinas:</strong>
-  <%= @dog.vacinas %>
+  <strong>Vacinas v8/v10?:</strong>
+  <%= @dog.vacinas ? "Sim" : "Não" %>
 </p>
 
-<%= link_to 'Edit', edit_cliente_dog_path(@cliente, @dog) %> |
-<%= link_to 'Back', cliente_dogs_path(@cliente) %>
+<%= link_to 'Editar', edit_cliente_dog_path(@cliente, @dog) %> |
+<%= link_to 'Voltar', cliente_dogs_path(@cliente) %>
