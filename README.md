@@ -30,7 +30,7 @@ Update: O rails ja produz automaticamente Views em HTML que fornecem um frontend
 
 Assim, inicio o primeiro passo pratico: aprender a utilizar Ruby on Rails e criar o projeto.
 
-Seguindo tutorial dos capitulos gratuitos de [1][1], descobrimos que o Heroku näo tem suporte ao Sqlite3 e tem suporte nativo ao Postegresql, descobrimos tambem que eh possivel utilizar o Sqlite3 apenas para develepment e o Postegresql apenas para deployment editando o Gemfile. Assim, eh exatamente isto que pretende-se fazer.
+Seguindo tutorial dos capitulos gratuitos de [[1]](https://github.com/dclin02/caseDogHero/tree/development/bibliografia.md), descobrimos que o Heroku näo tem suporte ao Sqlite3 e tem suporte nativo ao Postegresql, descobrimos tambem que eh possivel utilizar o Sqlite3 apenas para develepment e o Postegresql apenas para deployment editando o Gemfile. Assim, eh exatamente isto que pretende-se fazer.
 
 -> Idealização do [Modelo do banco de dados](https://github.com/dclin02/caseDogHero/tree/development/documentation/database.md):
 
@@ -49,7 +49,7 @@ Deployed successfuly at https://daniellincasedh.herokuapp.com/
 
 Aparentemten o rails inlcui um parametro id automaticamente, assim o index do email não era necessario (o objetivo era ter uma referencia ao cliente para ligar seus dogs). Mas acredito de apesar disso o index do email substitui o padrão, pelo menos não sendo redundante.
 
-Seguiu-se tutorial [2][2] para deixar Dogs nested com Clientes.
+Seguiu-se tutorial [[2]](https://github.com/dclin02/caseDogHero/tree/development/bibliografia.md) para deixar Dogs nested com Clientes.
 
 
 Com toda arquitetura MVC implementada, com algumas validações basicas implementadas, chegou-se a hora de iniciar as tentativas de testes:
@@ -71,5 +71,4 @@ pesquisar como transformar porte em faixas selecionaveis
 tentar centralizar conteudo na pagina
 
 Bibliografia
-[1]: railstutorial.org/book/beginning
-[2]: https://www.digitalocean.com/community/tutorials/how-to-create-nested-resources-for-a-ruby-on-rails-application
+[1] railstutorial.org/book/beginning
