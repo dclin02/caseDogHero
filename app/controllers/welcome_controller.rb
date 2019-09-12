@@ -4,6 +4,8 @@ class WelcomeController < ApplicationController
 
     
   def searchCliente
+    puts "IM HEEEEEEEEEEEEERRRRRRRRRRRRRRREEEEEEEEEEEEE"
+    puts params
     if params[:email]
       @cliente = Cliente.find_by(email: params[:email])
       if @cliente.present?
