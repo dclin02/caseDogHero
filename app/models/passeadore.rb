@@ -6,6 +6,6 @@ class Passeadore < ApplicationRecord
   validates :nome, :sobrenome, presence: true
   validates :email, uniqueness: { case_sensitive: false }
   validates :nome, :sobrenome, :bairro, length: { maximum: 50 }
-  #validates :preco, 
+  validates :preco, presence: true
   # implementar validacao de preco
 end
