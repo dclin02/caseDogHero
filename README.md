@@ -7,12 +7,15 @@
         - bundle install
 
 * Database creation and initialization
+
          - rails db:migrate
 
 * How to run the test suite
+
         - rails test
 
 * How to run locally
+
         - rails server
 
 * Deployment instructions
@@ -22,6 +25,7 @@ Has been deployed on Heroku (https://daniellincasedh.herokuapp.com/) through the
     - git push heroku master
 
 * Observations
+
      As this is a test application, Admin login when requested is User: admin , password: admin
 
 ### Diário de Desenvolvimento
