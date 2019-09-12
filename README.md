@@ -19,7 +19,8 @@
         - rails server
 
 * Deployment instructions
-Has been deployed on Heroku (https://daniellincasedh.herokuapp.com/) through the following method:
+
+    Has been deployed on Heroku (https://daniellincasedh.herokuapp.com/) through the following method:
         - heroku login
         - heroku create
         - git push heroku master
