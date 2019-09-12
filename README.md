@@ -1,40 +1,27 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
+* Ruby version = 2.5.1p57
 
 * Configuration
+bundle install
 
-* Database creation
-
-* Database initialization
+* Database creation and initialization
+rails db:migrate
 
 * How to run the test suite
+rails test
 
-* Services (job queues, cache servers, search engines, etc.)
+* How to run locally
+rails server
 
 * Deployment instructions
+Has been deployed on Heroku (link) through the following method:
+- heroku login
+- heroku create
+- git push heroku master
 
 * ...
-# caseDogHero
-Test Case
 
-Recentemente lançamos um serviço novo de passeios. Seu desafio será criar as telas de cadastro, listagem e apresentação do pet, cliente e a do passeador.
-
-    • Fique a vontade em propor a modelagem dos dados para estas três entidades como avaliar melhor; Use o banco de dados que quiser;
-    • Crie uma aplicação backend na plataforma que quiser e exponha os dados em formato de API; Criar em Ruby on Rails é um plus; Se arriscar em testes unitários é um plus;
-    • Cria uma aplicação frontend na plataforma que quiser, utilizando os dados expostos pela API anterior; Deixar um UI simples e amigável é um plus;
-    • Fazer deploy da aplicação em qualquer lugar (Heroku, AWS etc) é um plus;
-    • Distribua seu teste via GitHub ou outro;
-    • Documente seaus passos durante o desenvolvimento e também como rodar a aplicação;
-    
-    
+### Diario de Desenvolvimento
 A primeira decisão é de quais ferramentas utilizar para dominio do projeto. Como a empresa utiliza o Ruby on Rails, este será utilizado no Backend.
 Após uma pesquisa rapida, descobre-se que o Rails vem com suporte nativo e pré-configurado para utilizar o SQLite3, assim, este será o banco de dados utilizado.
 
@@ -45,7 +32,7 @@ Update: O rails ja produz automaticamente Views em HTML que fornecem um frontend
 
 Assim, inicio o primeiro passo pratico: aprender a utilizar Ruby on Rails e criar o projeto.
 
-Seguindo tutorial dos capitulos gratuitos de railstutorial.org, descobrimos que o Heroku näo tem suporte ao Sqlite3 e tem suporte nativo ao Postegresql, descobrimos tambem que eh possivel utilizar o Sqlite3 apenas para develepment e o Postegresql apenas para deployment editando o Gemfile. Assim, eh exatamente isto que pretende-se fazer.
+Seguindo tutorial dos capitulos gratuitos de [[1]](https://github.com/dclin02/caseDogHero/tree/development/bibliografia.md), descobrimos que o Heroku näo tem suporte ao Sqlite3 e tem suporte nativo ao Postegresql, descobrimos tambem que eh possivel utilizar o Sqlite3 apenas para develepment e o Postegresql apenas para deployment editando o Gemfile. Assim, eh exatamente isto que pretende-se fazer.
 
 Modelo do banco de dados:
 Clientes
@@ -94,3 +81,4 @@ pesquisar como transformar porte em faixas selecionaveis
 tentar centralizar conteudo na pagina
 
 Bibliografia
+[1] railstutorial.org/book/beginning
