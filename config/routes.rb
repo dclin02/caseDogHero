@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'admins/dash'
+  get 'admins/showClientes'
+  get 'admins/showDogs'
+  get 'admins/showPasseadores'
   #resources :dogs
   root 'application#hello'
   resources :passeadores
