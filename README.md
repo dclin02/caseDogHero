@@ -3,6 +3,7 @@
 * Rails version = 6.0.0
 
 * Configuration
+
 bundle install
 
 * Database creation and initialization
