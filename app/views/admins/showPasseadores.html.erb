@@ -1,2 +1,37 @@
 <h1>Admins#showPasseadores</h1>
 <p>Find me in app/views/admins/showPasseadores.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<h1>Passeadores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Nome</th>
+      <th>Sobrenome</th>
+      <th>Tel</th>
+      <th>Bairro</th>
+      <th>Preco</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @passeadores.each do |passeadore| %>
+      <tr>
+        <td><%= passeadore.email %></td>
+        <td><%= passeadore.nome %></td>
+        <td><%= passeadore.sobrenome %></td>
+        <td><%= passeadore.tel %></td>
+        <td><%= passeadore.bairro %></td>
+        <td><%= passeadore.preco %></td>
+        <td><%= link_to 'Show', passeadore %></td>
+        <td><%= link_to 'Edit', edit_passeadore_path(passeadore) %></td>
+        <td><%= link_to 'Destroy', passeadore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Back', admins_path %>

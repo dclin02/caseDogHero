@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/admin', to: 'admins#dash'
   get 'admins', to: 'admins#dash'
   get 'admins/dash'
   get 'admins/showClientes'
