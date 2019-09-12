@@ -1,2 +1,53 @@
 <h1>Admins#showDogs</h1>
 <p>Find me in app/views/admins/showDogs.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<h1>Dogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cliente</th>
+      <th>Nome</th>
+      <th>Raca</th>
+      <th>Genero</th>
+      <th>Idade</th>
+      <th>Porte</th>
+      <th>Castrado</th>
+      <th>Raiva</th>
+      <th>Vacinas</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clientes.each do |cliente| %>
+      <tr>
+      <%if cliente.dogs.any? then %>
+        <td><%= cliente.email %></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td><%= link_to 'Show', cliente %></td>
+        <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
+        <td><%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <tr>
+        <% cliente.dogs.each do |dog| %>
+            <td></td>
+            <td><%= dog.nome %></td>
+            <td><%= dog.raca %></td>
+            <td><%= dog.genero %></td>
+            <td><%= dog.idade %></td>
+            <td><%= dog.porte %></td>
+            <td><%= dog.castrado ? "Sim" : "Não" %></td>
+            <td><%= dog.raiva ? "Sim" : "Não" %></td>
+            <td><%= dog.vacinas ? "Sim" : "Não" %></td>
+            <td><%= link_to 'Show', [cliente, dog] %></td>
+            <td><%= link_to 'Edit', edit_cliente_dog_path(cliente, dog) %></td>
+            <td><%= link_to 'Destroy', [cliente, dog], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

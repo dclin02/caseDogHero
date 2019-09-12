@@ -3,9 +3,11 @@ class AdminsController < ApplicationController
   end
 
   def showClientes
+    @clientes = Cliente.all
   end
 
   def showDogs
+    @clientes = Cliente.all
   end
 
   def showPasseadores
