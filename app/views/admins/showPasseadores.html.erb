@@ -1,3 +1,5 @@
+<h1>Admins#showPasseadores</h1>
+<p>Find me in app/views/admins/showPasseadores.html.erb</p>
 <p id="notice"><%= notice %></p>
 
 <h1>Passeadores</h1>
@@ -24,14 +26,12 @@
         <td><%= passeadore.tel %></td>
         <td><%= passeadore.bairro %></td>
         <td><%= passeadore.preco %></td>
-        <td><%= link_to 'Show', passeadore %></td>
-        <td><%= link_to 'Edit', edit_passeadore_path(passeadore) %></td>
-        <td><%= link_to 'Destroy', passeadore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', passeadore %></td>
+        <td><%= link_to 'Editar', edit_passeadore_path(passeadore) %></td>
+        <td><%= link_to 'Destruir', passeadore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Passeadore', new_passeadore_path %>
+<%= link_to 'Voltar', admins_path %>
