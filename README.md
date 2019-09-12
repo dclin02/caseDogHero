@@ -80,6 +80,9 @@ Tendo-se testado as funcionalidades, iremos refatorar o código para torná-lo m
 Melhorando-se os formulários na View da Primeira Pagina, sente-se a necessidade de expandir os testes para cobrir o comportamento dos flash[:notice].
 
 Pretende-se ainda implementar, caso tenhamos tempo:
-todo: pesquisa de passeadores por bairro na pagina do cliente
-pesquisar como transformar porte em faixas selecionaveis
-tentar centralizar conteudo na pagina
+
+todo: 
+
+    - pesquisar como transformar porte em faixas selecionaveis
+    - tentar centralizar conteudo na pagina
+    - pesquisa de passeadores por bairro na pagina do cliente
