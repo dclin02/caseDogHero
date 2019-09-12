@@ -45,9 +45,4 @@ class ClientesControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to clientes_url
   end
-
-  test "should not save cliente without name" do
-    cliente = Cliente.new
-  end
-  
 end
