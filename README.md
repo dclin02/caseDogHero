@@ -14,15 +14,13 @@ rails test
 rails server
 
 * Deployment instructions
-Has been deployed on Heroku (link) through the following method:
+Has been deployed on Heroku (https://daniellincasedh.herokuapp.com/) through the following method:
     - heroku login
     - heroku create
     - git push heroku master
 
-* ...
-
 ### Diario de Desenvolvimento
-A primeira decisão é de quais ferramentas utilizar para dominio do projeto. Como a empresa utiliza o Ruby on Rails, este será utilizado no Backend.
+A primeira decisão é de quais ferramentas utilizar em cada dominio do projeto. Como a empresa utiliza o Ruby on Rails, este será utilizado no Backend.
 Após uma pesquisa rapida, descobre-se que o Rails vem com suporte nativo e pré-configurado para utilizar o SQLite3, assim, este será o banco de dados utilizado.
 
 Como nunca utilizei Ruby, não possuo nenhuma IDE para utiliza-lo de forma eficiente, assim, escolheu-se aprender a utilizar o VS Code como ambiente de desenvolvimento para o projeto pois é leve e open source, possui um terminal integrado para rodar os comandos do rails, possui extensões para facilitar tarefas do rails como testes.
@@ -34,19 +32,11 @@ Assim, inicio o primeiro passo pratico: aprender a utilizar Ruby on Rails e cria
 
 Seguindo tutorial dos capitulos gratuitos de [[1]](https://github.com/dclin02/caseDogHero/tree/development/bibliografia.md), descobrimos que o Heroku näo tem suporte ao Sqlite3 e tem suporte nativo ao Postegresql, descobrimos tambem que eh possivel utilizar o Sqlite3 apenas para develepment e o Postegresql apenas para deployment editando o Gemfile. Assim, eh exatamente isto que pretende-se fazer.
 
-Modelo do banco de dados:
-Clientes
-cliente_id email nome sobrenome tel endereco
-         ^
-Dogs     |
-id cliente_id nome raca genero idade porte castrado raiva v8_v10
-
-Passeadores
-id email nome sobrenome tel bairro preco
+-> Idealização do [Modelo do banco de dados](https://github.com/dclin02/caseDogHero/tree/development/documentation/database.md):
 
 -> criação do modelo cliente
 
--> Como queremos interagir de modo RESTful com os clientes, dogs e passeadores podemos facilitar e acelerar a criação de todos os componentes (controller model e view) pela geração automatica com scaffold
+-> Como queremos interagir de modo RESTful com os clientes, dogs e passeadores podemos facilitar e acelerar a criação de todos os componentes (controller model e view) pela geração automatica com scaffold.
 
 1a tentativa rails generate scaffold Clientes email:distinct:index nome sobrenome tel endereco
 :distinct não produziu o efeito desejado
@@ -55,7 +45,7 @@ mudando para
 rails destroy scaffold Clientes
 rails generate scaffold Clientes email:uniq:index nome sobrenome tel endereco  (:uniq:index é redundante?)
 
-deployed successfuly at https://murmuring-shore-33383.herokuapp.com/
+deployed successfuly at https://daniellincasedh.herokuapp.com/
 
 Aparentemten o rails inlcui um parametro id automaticamente, assim o index do email não era necessario (o objetivo era ter uma referencia ao cliente para ligar seus dogs)
 
