@@ -12,8 +12,8 @@
       <th>Idade</th>
       <th>Porte</th>
       <th>Castrado</th>
-      <th>Raiva</th>
-      <th>Vacinas</th>
+      <th>Vacinado contra Raiva?</th>
+      <th>Vacinas v8/v10?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -27,9 +27,9 @@
         <td><%= dog.genero %></td>
         <td><%= dog.idade %></td>
         <td><%= dog.porte %></td>
-        <td><%= dog.castrado %></td>
-        <td><%= dog.raiva %></td>
-        <td><%= dog.vacinas %></td>
+        <td><%= dog.castrado ? "Sim" : "Não" %></td>
+        <td><%= dog.raiva ? "Sim" : "Não" %></td>
+        <td><%= dog.vacinas ? "Sim" : "Não" %></td>
         <td><%= link_to 'Show', [@cliente, dog] %></td>
         <td><%= link_to 'Edit', edit_cliente_dog_path(@cliente, dog) %></td>
         <td><%= link_to 'Destroy', [@cliente, dog], method: :delete, data: { confirm: 'Are you sure?' } %></td>
