@@ -1,5 +1,6 @@
 # README
 * Ruby version = 2.5.1p57
+* Rails version = 6.0.0
 
 * Configuration
 bundle install
