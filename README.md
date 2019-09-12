@@ -7,13 +7,13 @@
         - bundle install
 
 * Database creation and initialization
-rails db:migrate
+         - rails db:migrate
 
 * How to run the test suite
-rails test
+        - rails test
 
 * How to run locally
-rails server
+        - rails server
 
 * Deployment instructions
 Has been deployed on Heroku (https://daniellincasedh.herokuapp.com/) through the following method:
@@ -22,7 +22,7 @@ Has been deployed on Heroku (https://daniellincasedh.herokuapp.com/) through the
     - git push heroku master
 
 * Observations
-    As this is a test application, Admin login when requested is User: admin , password: admin
+     As this is a test application, Admin login when requested is User: admin , password: admin
 
 ### Diário de Desenvolvimento
 A primeira decisão é de quais ferramentas utilizar em cada dominio do projeto. Como a empresa utiliza o Ruby on Rails, este será utilizado no Backend.
