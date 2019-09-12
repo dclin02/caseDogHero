@@ -9,7 +9,7 @@
 <br><br>
 <%= form_with(url: welcome_searchCliente_path, local: true, method: "get") do %>
   <%= label_tag(:email, "Entrar como Cliente:") %>
-  <%= text_field_tag(:email) %>
+  <%= text_field_tag(:email, nil,  placeholder: 'Digite seu email...') %>
   <%= submit_tag("Search") %>
 <% end %>
 
@@ -20,6 +20,6 @@
 <br>
 <%= form_with(url: welcome_searchPasseadore_path, local: true, method: "get") do %>
   <%= label_tag(:pEmail, "Entrar como Passeador:") %>
-  <%= text_field_tag(:pEmail) %>
+  <%= text_field_tag(:pEmail, nil, placeholder: 'Digite seu email...') %>
   <%= submit_tag("Search") %>
 <% end %>
