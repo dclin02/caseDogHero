@@ -4,7 +4,7 @@
 
 * Configuration
 
-bundle install
+        - bundle install
 
 * Database creation and initialization
 rails db:migrate
