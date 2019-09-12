@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
   get '/admin', to: 'admins#dash'
   get 'admins', to: 'admins#dash'
   get 'admins/dash'
