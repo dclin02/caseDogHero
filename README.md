@@ -15,9 +15,9 @@ rails server
 
 * Deployment instructions
 Has been deployed on Heroku (link) through the following method:
-- heroku login
-- heroku create
-- git push heroku master
+    - heroku login
+    - heroku create
+    - git push heroku master
 
 * ...
 
