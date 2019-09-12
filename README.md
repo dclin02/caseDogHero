@@ -19,7 +19,7 @@ Has been deployed on Heroku (https://daniellincasedh.herokuapp.com/) through the
     - heroku create
     - git push heroku master
 
-### Diario de Desenvolvimento
+### Diário de Desenvolvimento
 A primeira decisão é de quais ferramentas utilizar em cada dominio do projeto. Como a empresa utiliza o Ruby on Rails, este será utilizado no Backend.
 Após uma pesquisa rapida, descobre-se que o Rails vem com suporte nativo e pré-configurado para utilizar o SQLite3, assim, este será o banco de dados utilizado.
 
@@ -30,7 +30,7 @@ Update: O rails ja produz automaticamente Views em HTML que fornecem um frontend
 
 Assim, inicio o primeiro passo pratico: aprender a utilizar Ruby on Rails e criar o projeto.
 
-Seguindo tutorial dos capitulos gratuitos de [[1]](https://github.com/dclin02/caseDogHero/tree/development/bibliografia.md), descobrimos que o Heroku näo tem suporte ao Sqlite3 e tem suporte nativo ao Postegresql, descobrimos tambem que eh possivel utilizar o Sqlite3 apenas para develepment e o Postegresql apenas para deployment editando o Gemfile. Assim, eh exatamente isto que pretende-se fazer.
+Seguindo tutorial dos capitulos gratuitos de [[1]][1], descobrimos que o Heroku näo tem suporte ao Sqlite3 e tem suporte nativo ao Postegresql, descobrimos tambem que eh possivel utilizar o Sqlite3 apenas para develepment e o Postegresql apenas para deployment editando o Gemfile. Assim, eh exatamente isto que pretende-se fazer.
 
 -> Idealização do [Modelo do banco de dados](https://github.com/dclin02/caseDogHero/tree/development/documentation/database.md):
 
@@ -45,14 +45,14 @@ mudando para
 rails destroy scaffold Clientes
 rails generate scaffold Clientes email:uniq:index nome sobrenome tel endereco  (:uniq:index é redundante?)
 
-deployed successfuly at https://daniellincasedh.herokuapp.com/
+Deployed successfuly at https://daniellincasedh.herokuapp.com/
 
-Aparentemten o rails inlcui um parametro id automaticamente, assim o index do email não era necessario (o objetivo era ter uma referencia ao cliente para ligar seus dogs)
+Aparentemten o rails inlcui um parametro id automaticamente, assim o index do email não era necessario (o objetivo era ter uma referencia ao cliente para ligar seus dogs). Mas acredito de apesar disso o index do email substitui o padrão, pelo menos não sendo redundante.
 
-Tutorial utilizado para deixar Dogs nested com Clientes https://www.digitalocean.com/community/tutorials/how-to-create-nested-resources-for-a-ruby-on-rails-application 
+Seguiu-se tutorial [2][2] para deixar Dogs nested com Clientes.
 
 
-Com os toda arquitetura MVC implementada, com algumas validações basicas implementadas, chegou-se a hora de iniciar as tentativas de testes:
+Com toda arquitetura MVC implementada, com algumas validações basicas implementadas, chegou-se a hora de iniciar as tentativas de testes:
 Ao se rodar rails test, todos os testes apresetam erros. Iniciaremos concertando os testes gerados pelo scaffold antes de passar para outras etapas. Temos inicialmente erros relacionados a routing pelos testes não levarem em conta que Dogs esta nested em Clientes, e erros relacionados a validação de uniqueness do email dos clientes e passeadores.
 
 Agora com todos os testes passando, chega-se a hora de criar nossos proprios testes unitarios.
@@ -71,4 +71,5 @@ pesquisar como transformar porte em faixas selecionaveis
 tentar centralizar conteudo na pagina
 
 Bibliografia
-[1] railstutorial.org/book/beginning
+[1]: railstutorial.org/book/beginning
+[2]: https://www.digitalocean.com/community/tutorials/how-to-create-nested-resources-for-a-ruby-on-rails-application
