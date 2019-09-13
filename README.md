@@ -71,7 +71,7 @@ Pesquisando sobre testes em Rails, tem-se a impressão que a ferramenta mais uti
 
 Até agora aprendeu-se muito sobre o Rails mas programou-se pouco em Ruby e boa parte do Rails foi feito automaticamente. Para exercitar melhor tudo o que foi aprendido, decidiu-se implementar algumas novas funcionalidades:
 
-* Adicionou-se o Controlador Admins, cujo intuito é dar opções acessíveis somente após realizar uma autenticação. Estas ações são a de listar todos os clientes, listar todos os passeadores, e listar todos os cachorros (que por sua vez estão agrupados por seus clientes).
+* Adicionou-se o Controlador Admins, cujo intuito é dar opções acessíveis somente após realizar uma autenticação. Estas ações são a de listar todos os clientes, listar todos os passeadores, e listar todos os cachorros (que por sua vez estão agrupados por seus clientes, clientes sem nenhum cachorro não são listados).
 * Adicionou-se uma Pagina Inicial através do novo WelcomeController que contem as opções: Login Admin, Cadastrar Cliente, Cadastrar Passeador, Entrar como Cliente (formulário de email), Entrar como Passeador (formulário de email).
 Assim, um usuário sem autenticação não consegue listar todo conteúdo das tabelas, e consegue apenas visualizar um cliente/passeador por vez apenas sabendo seu email.
 
