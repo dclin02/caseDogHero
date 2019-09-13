@@ -86,5 +86,8 @@ Pretende-se ainda implementar, caso tenhamos tempo:
 todo: 
 
     - pesquisar como transformar porte em faixas selecionáveis
-    - tentar centralizar conteúdo na pagina
+    - tentar centralizar conteúdo na pagina (necessita de CSS?)
     - pesquisa de passeadores por bairro na pagina do cliente
+
+Adicionou-se o histórico de commits do projeto no arquivo [gitCommitHistory.md](https://github.com/dclin02/caseDogHero/blob/master/gitCommitHistory.md)
+por considerar-se que este representa bem o fluxo do desenvolvimento do projeto.
